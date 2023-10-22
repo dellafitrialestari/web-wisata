@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ /* memberi warna biru background wisata */
+body{
+  background-color: #80dbf1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto',sans-serif;
+}
+ /* heading 1 atau bagian judul wisata */
+h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 51px;
+  font-weight: 300;
+  margin-right: 20px;
+  line-height: 1.2;
+}
+ /* tombol back/kembali ke halaman beranda wisata*/
+a{
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration:none;
+  color:white;
+  transition: letter spacing 0.2s ease-in-out;
+}
+a:hover{
+  letter-spacing: 2px;
+}
+
+.paragraf{
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+ /*isi deskripsi wisata*/
+.main-container{
+  display: flex;
+  width: 90%;
+  height: 650px;
+}
+.left-side{
+  width: 35%;
+  background: no-repeat top/cover;
+}
+.left-side div{
+  display: flex;
+  align-items: center;
+  padding: 40px 35px;
+  opacity: 0.5;
+}
+.left-side div:hover{
+  opacity: 1;
+}
+/* memberi background putih diatas backgroung biru*/
+.right-side{
+  width: 850px;
+  background-color: #fff;
+}
+/*judul wisata*/
+.title{
+  display: flex;
+  align-items: center;
+  padding: 30px 50px 15px 50px;
+}
+/*garis bawah setelah judul wisata*/
+.line{
+  width: 100px;
+  border: 2px solid #000;
+  margin-top: 5%;
+}
+/* batas kiri deskripsi*/
+.text{
+  margin-left: 10px;
+}

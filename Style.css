@@ -1,0 +1,301 @@
+ /*berlaku kesemua tag*/
+* {
+    font-family: Arial, Helvetica, sans-serif; /*pengaturan huruf*/
+    line-height: 20px;
+    font-size: 15px; /*ukuran huruf*/
+  }
+  
+  /*Video memenuhi layar*/
+  html {
+    margin: 0; /*agar tidak ada jeda di tepian*/
+    padding: 0;
+    scroll-behavior: smooth; /*memberikan efek smooth saat scroll*/
+  }
+  body {
+    margin: 0px; /*agar tidak ada jeda tepian*/
+    padding: 0px;
+  }
+  /*class layar dalam*/
+  .layar-dalam {
+    width: 1000px;
+    margin: auto;
+  }
+  /*class layar penuh*/
+  .layar-penuh {
+    width: 100%;
+  }
+  nav {
+    z-index: 100; /*agar posisinya diatas*/
+    color: #fff; /*warna default*/
+    text-align: center; /*posisi huruf*/
+    position: fixed; /*agar posisi diatas*/
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 60px;
+    width: 100%; /*mengatur lebar agar selalu memenuhi semua layar*/
+    transition: background-color 0.5s ease; /*memberikan efek smooth saat menu berpindah dari transparan ke putih saat scroll*/
+  }
+  /*memberikan efek background putih di menu*/
+  nav.putih {
+    background-color: #fff;
+  }
+  /* menu */
+  nav .menu {
+    float: right; /*posisi menu disebelah kanan*/
+    height: 60px;
+    max-width: 600px;
+  }
+  /*agar menu mendatar tidak kebawah*/
+  nav .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /*pengaturan untuk posisi menu*/
+  }
+  /*pengaturan untuk li*/
+  nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+  }
+  /* pengaturan tag a */
+  nav ul li a {
+    color: #fff;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none; /*supaya tidak menampilkan underline*/
+  }
+/*agar saat kursor diletakkan diatas memberikan tanda*/
+  nav ul li a:hover {
+    text-decoration: underline; /*saat kursor di atas teks menu, memberikan underline dibawahnya*/
+  }
+  
+ /* pengaturan header */
+  header { /*supaya tidak ada scrolling ke kanan atau kiri di bawah*/
+    position:relative; 
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /*menghilangkan jika ada sisa hingga tidak ada scrolling*/
+  }
+  header video { /*pengaturan video*/
+    position:absolute; /*agar saat layar minimaize tidak ada scrolling*/
+    object-fit:cover;
+    z-index: -2;
+    height:100%;
+    width:100%;
+  }
+  header .intro {
+    z-index: 100; /*agar tulisan berada di atas video tetapi masih dibagian bawah dari menunya*/
+    color: rgba(255, 255, 255, 0.342);
+    text-align: center; /*teks tengah*/
+    position:relative;
+    top: 50%;  /*agar jeda dari atasnya 50% sehingga berada di tengah*/
+  }
+  header .intro h3 { /*pengaturan untuk tag h3 di class intro*/
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  /*memberikan overlay diatas video*/
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; /*agar memenuhi ruangan tetapi masih berada di tag header*/
+    width: 100%;
+    background-color: #000;
+    opacity: 50%; /*agar warna hitamnya intersitas berkurang*/
+    z-index: -1;
+  }
+  /*mengatur tombol menu*/
+  .tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+  /*mengatur agar jika layar minimaize menu menjadi kanan atas, tetapi ini belum menampilkan garis-garis menu*/
+  .tombol-menu .garis {
+    height: 3px;
+    background-color: rgb(233, 233, 233);
+  }
+  /*mengatur section*/
+  section {
+    padding: 50px 0px 50px 0px;
+  }
+  /*mengatur h3*/
+  section h3 {
+    font-size: 30px;
+  }
+  /*memberi garis bawah di h3*/
+  section h3::after { /*:: semacam shutdow cut atau tag bayangan dari h3*/
+    content: "";
+    border-bottom: 5px solid #c86b85;
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+  }
+  /*memakai # karena untuk id*/
+  #description,
+  #team,
+  #pesan {
+    text-align: center; /*h3 akan berada di tengah dan */
+  }
+  /*agar class ringkasan berbeda dari sebelumnya*/
+  section p.ringkasan {
+    font-style: italic;
+    font-size: 18px;
+    color: #ababab;
+  }
+  section .konten-isi p {
+    font-style: normal;
+  }
+  /*mengganti warna background nav saat scroll*/
+  nav.putih { /*ini akan bekerja saat sudah menggabungkan dengan javascript*/
+    background-color: #fff;
+  }
+  /*menampilkan menu saat scroll*/
+  nav.putih .tombol-menu .garis {
+    background-color: #333;
+  }
+  /*Mengatur warna menu saat tampilan maksimal*/
+  nav.putih ul li a {
+    color: #333;
+  }
+  /*memberi background abu-abu di section dan berbeda warna dari sebelumnya*/
+  section.abuabu {
+    background-color: #f5f6f6;
+  }
+  .info,
+  .tim,
+  .pesan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /*agar mendatar tidak kebawah*/
+  }
+  .info h6,
+  .tim h6 {
+    margin: 0px;
+    margin-top: 20px; /*memberi jarak antara gambar dengan judul*/
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .info img { /*mengatur gambar*/
+    width: 50px;
+  }
+  .info div, /*agar kebagian tengah*/
+  .tim div {
+    text-align: center;
+    width: 26%;
+  }
+  /*mengatur section dengan id gallery yang diberi evek hover*/
+  section#gallery div img:hover { 
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+  }
+  section.quote {
+    background: url("asset/background.jpg") no-repeat; /*memberikan backgroung bagian quote*/
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    padding: 100px;
+  }
+  /*memberikan tanda petik quote*/
+  section.quote .layar-dalam p {
+    display: inline;
+    background: url("asset/quote-icon.png") no-repeat;
+    padding: 40px;
+  }
+  /*mengatur gambar*/
+  .tim img {
+    width: 100%; /*mengatur lebar*/
+    height: 75%;
+    border-radius: 5px; /*agar sudutnya tumpul*/
+    box-shadow: 0px -10px 30px #ccc; /*mengatur warna bayangan*/
+  }
+  /*mengatur footer*/
+  footer {
+    padding: 50px 0px 50px 0px;
+    background-color: #343a40; /*memberi background footer*/
+    color: #fff; /*warna teks di footer*/
+  }
+  footer .layar-dalam {
+    display: flex;
+    flex-direction: row; /*agar membentuk kolom*/
+    justify-content: space-between; /* jarak antara satu dengan lainnya*/
+  }
+  footer .layar-dalam div { /*agar ada jeda antara satu lokasi dengan lokasi lainnya*/
+    width: 20%; /*mengatur lebar*/
+  }
+  footer .layar-dalam h5 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  footer .layar-dalam .copyright {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #666; /*memberikan garis diatas nya*/
+    text-align: center;
+  }
+/*comment box*/
+form{
+  width: 500px;
+}
+input,textarea{
+  padding: 8px 5px;
+  margin: 15px 0;
+  width: 100%;
+  display: block;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+/*mengatur jika posisi lebih kecil dari 991.98px*/
+  @media screen and (max-width: 991.98px) { /*jika layar dalam berposisi minimaize maka bukan lagi 1000px tetapi 90%*/
+    .layar-dalam {
+      width: 90%;
+    }
+    /*agar menu tidak mendatar tapi kebawah saat layar minimaize*/
+    nav .menu ul {
+      display: none; /*menghilangkan menu karena jika diminimaize berada dibawah*/
+      margin-top: 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; /*agar menu memenuhi layar*/
+    }
+     /*mengatur tampilan menu*/
+    nav .menu ul li {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff; /*background menu*/
+      line-height: 40px;
+    }
+    nav .menu ul li a {
+      color: #333;
+    }
+    /*Agar garis-garis menu bi pojok kanan atas tampil*/
+    .tombol-menu {
+      display: flex;
+    }
+    /*agar memenuhi semua ruangan*/
+    .info {
+      display: block;
+    }
+    .info div {
+      width: 100%;
+      padding-bottom: 30px; /*jeda dibagian bawahnya*/
+    }
+  }

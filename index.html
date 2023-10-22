@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wisata</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio autoplay loop>
+      <source src="asset/musik.mp3" type="audio/mpeg">
+    </audio>
+     <!--Nagivasi-->
+    <!--Bagian tombol menu/Daftar isi-->
+    <nav>
+      <div class="layar-dalam">
+        <div class="menu">
+          <a href="#" class="tombol-menu">
+            <span class="garis"></span>
+            <span class="garis"></span>
+            <span class="garis"></span>
+          </a>
+          <ul>
+            <!--# karena ada dihalaman yang sama-->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#gallery">Wisata</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#pesan">Message</a></li>
+            <li><a href="#contact">Lain-lain</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--meletakkan area agar memenuhi semua layar, jika layar dalam hanya bagian tengahnya saja-->
+    <div class="layar-penuh">
+      <header id="home">
+        <!--memberikan overlay diatas video-->
+        <div class="overlay"></div>
+        <!--bagian video header -->
+        <!--autoplay langsung menjalankan video-->
+        <video playsinline autoplay muted loop>
+          <source src="asset/jawa-tengah.mp4" type="video/mp4" />
+        </video>
+        <!--menambahkan tulisan diatas video/header-->
+        <div class="intro">
+          <h3>JAWA TENGAH</h3>
+        </div>
+      </header>
+       <!--tag main untuk meletakkan tulisan-->
+      <main>
+        <!--section description-->
+        <section id="description">
+          <div class="layar-dalam">
+            <h3>Description</h3>
+            <p class="ringkasan">
+              Jawa Tengah adalah sebuah provinsi yang menduduki posisi ketiga sebagai provinsi terpadat di Indonesia. Akan tetapi, 
+              kawasan ini menyimpan begitu banyak peninggalan sejarah dan budaya yang masih terus dilestarikan sebagai atraksi wisata 
+              hingga saat ini. Bahkan, wilayah ini pun terkenal masih rutin mengadakan pertunjukan seni, seperti wayang ataupun tarian 
+              tradisional di berbagai kota, seperti Semarang, Yogyakarta, dan Solo.
+            </p>
+          </div>
+        </section>
+        <!--section info-->
+        <section class="abuabu" id="info">
+          <div class="layar-dalam info">
+            <div>
+              <img src="asset/support1.png" />
+              <h6>Harga Tiket</h6>
+              <p title="">
+                Harga tiket yang tertera untuk mengunjungi destinasi wisata pilihan.
+              </p>
+            </div>
+            <div>
+              <img src="asset/support2.png" />
+              <h6>Lokasi</h6>
+              <p>
+                Penjelasan lokasi wisata untuk mempermudah wisatawan menemukan lokasi wisata.
+              </p>
+            </div>
+            <div>
+              <img src="asset/support3.png" />
+              <h6>Jam Operasional</h6>
+              <p>
+                Mencantumkan Jam Operasional setiap tempat wisata agar wisatawan dapat mengetahui kapan waktu yang tepat untuk mengunjungi lokasi wisata.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--section wisata-->
+        <section id="gallery">
+          <div class="tim">
+            <div>
+              <a href="wisata1.html">
+              <img src="asset/foto1.jpg" />
+              </a>
+              <h6>Candi Borobudur</h6>
+            </div>
+            <div>
+              <a href="wisata2.html">
+              <img src="asset/foto2.jpg" />
+              </a>
+              <h6>Candi Prambanan</h6>
+            </div>
+            <div>
+              <a href="wisata3.html">
+              <img src="asset/foto3.jpg" />
+              </a>
+              <h6>Pulau Pajang</h6>
+            </div>
+          </div>
+        <p>
+          <div class="tim">
+            <div>
+              <a href="wisata4.html">
+              <img src="asset/foto4.jpg" />
+              </a>
+              <h6>Lawang Sewu</h6>
+            </div>
+            <div>
+              <a href="wisata5.html">
+              <img src="asset/foto5.jpg" />
+              </a>
+              <h6>Kampung Batik Laweyan</h6>
+            </div>
+            <div>
+              <a href="wisata6.html">
+              <img src="asset/foto6.jpg" />
+              </a>
+              <h6>Umbul Ponggok</h6>
+            </div>
+          </div>
+        </p>
+        <br>
+        <p>
+          <div class="tim">
+            <div>
+              <a href="wisata7.html">
+              <img src="asset/foto7.jpg" />
+              </a>
+              <h6>Pantai Karang Bolong</h6>
+            </div>
+            <div>
+              <a href="wisata8.html">
+              <img src="asset/foto8.jpg" />
+              </a>
+              <h6>Dataran Tinggi Dieng</h6>
+            </div>
+            <div>
+              <a href="wisata9.html">
+              <img src="asset/foto9.jpg" />
+              </a>
+              <h6>Goa Petruk</h6>
+            </div>
+          </div>
+        </div>
+        </p>
+        </section>
+        <!--section quote-->
+        <section class="quote">
+          <div class="layar-dalam">
+            <p>Alam menciptakan kemampuan. Keberuntungan melengkapinya dengan kesempatan. </p>
+          </div>
+        </section>
+        <!--section team-->
+        <section id="team">
+          <div class="layar-dalam">
+            <h3>Our Team</h3>
+            <div class="tim">
+              <div>
+                <img src="asset/della.jpg" />
+                <h6>Della Fitria Lestari</h6>
+                <span>Sragen</span>
+              </div>
+              <div>
+                <img src="asset/azil.jpeg" />
+                <h6>'Azizil'an Sarina Putra</h6>
+                <span>Banjarnegara</span>
+              </div>
+              <div>
+                <img src="asset/adel.jpg" />
+                <h6>Adelia Salsabila</h6>
+                <span>Banjarnegara</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--section comment box-->
+        <section class="abuabu" id="pesan">
+          <div class="layar-dalam">
+            <h3>Message</h3>
+            <p class="ringkasan">Untuk masukan dan saran silahkan kirimkan melalui box dibawah ini.</p>
+          <div class="box">
+          <form action="https://formsubmit.co/dellafitrialestari777@gmail.com" method="POST">
+            <input placeholder="Enter your name" type="text" name="name" required>
+            <input placeholder="Enter your email" type="email" name="email" required>
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
+            <button type="submit">Send</button>
+          </form>
+          </div>
+        </section>
+      </main>
+      <!--membuat bagian footer dan section contact-->
+      <footer id="contact">
+        <div class="layar-dalam">
+          <div>
+            <h5>Motivasi</h5>
+            Jaga alam maka alam akan menjagamu
+          </div>
+          <div>
+            <h5>Contact</h5>
+            <span>Azizil : 082126963934</span> 
+            <br> 
+            <span>Della  : 081578923093</span>
+            <br>
+            <span>Adelia : 082138170595</span>
+          </div>
+          <div>
+            <h5>E-mail</h5>
+            <span>azizil.putra12@gmail.com</span>
+            <span>adeliasalsabila1001@gmail.com</span>
+            <span>dellafitrialestari777@gmail.com</span>
+          </div> 
+        </div>
+        <!--copyright-->
+        <div class="layar-dalam">
+          <div class="copyright">&copy; 2021 Wisata jawa-tengah</div>
+        </div>
+      </footer>
+    </div>
+    <!--menambahkan JavaScript dan JQuery, JQuery dari code.jquery.com yang jQuery 3.x-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>
